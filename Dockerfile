@@ -2,9 +2,10 @@ FROM openjdk:17-slim
 
 WORKDIR /app
 
-COPY ./target/deveops-sdlc-petclinic.jar /app/
+COPY target/spring-petclinic-*.jar app.jar
 
+# Make port 8080 available to the world outside this container
 EXPOSE 8080
 
 # Run the jar file 
-CMD ["java", "-jar", "deveops-sdlc-petclinic.jar"]
+CMD ["java", "-jar", "app.jar"]
