@@ -2,7 +2,7 @@ FROM openjdk:17-slim
 
 WORKDIR /app
 
-COPY target/spring-petclinic-*.jar app.jar
+COPY target/devops-sdlc-pipeline-*.jar app.jar
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
