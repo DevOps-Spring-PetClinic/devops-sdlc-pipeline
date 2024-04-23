@@ -2,7 +2,7 @@
 FROM openjdk:17-slim
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /user/app
 
 # Copy the jar file from your host to your current location in the Docker image
 COPY target/deveops-sdlc-petclinic-*.jar app.jar
