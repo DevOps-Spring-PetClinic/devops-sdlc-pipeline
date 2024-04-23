@@ -106,7 +106,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile
+          #file: ./Dockerfile
           push: true
           tags: user/app:latest
       - name: Post to devOps-Project
