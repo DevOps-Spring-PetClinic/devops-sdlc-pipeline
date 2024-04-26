@@ -151,8 +151,8 @@ jobs:
 
       - name: Get GKE credentials
         run: |
-          gcloud container clusters get-credentials petclinic-cluster-1 \
-          --zone us-central1 \
+          gcloud container clusters get-credentials ${{ secrets.PROJ_NAME}} \
+          --zone ${{ secrets.PROJ_REG }} \
           --project ${{ secrets.GKE_PROJECT_ID }}
           
       - name: Deploy to GKE
