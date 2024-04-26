@@ -141,10 +141,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: containerisation
     steps:
+      - uses: actions/checkout@master
       - name: Deploy to Kubernetes
-        run: kubectl apply -f deployment.yaml
+        uses: ameydev/gke-kubecli-action@master
         env:
-          KUBECONFIG: ${{ secrets.KUBECONFIG }}
+          PROECT_ID: ${{ secrets.GKE_PROJECT_ID }}
+          CREDENTIAL: ${{ secrets.GKE_SECRET_KEY }}
+          GKE_CLUSTER: petclinic-cluster-1
+          GKE_ZONE: us-central1
+          run: kubectl apply -f .devecontainer/
 
   monitor:
     runs-on: ubuntu-latest
