@@ -149,6 +149,9 @@ jobs:
       - uses: 'google-github-actions/auth@v2'
         with:
           credentials_json: '${{ secrets.CREDENTIALS_JSON }}'
+          
+      - name: Install GKE gcloud auth plugin
+        run: gcloud components install gke-gcloud-auth-plugin
 
       - name: Get GKE credentials
         run: gcloud container clusters get-credentials ${{ secrets.GKE_CLUSTER_NAME }} --region us-central1 --project ${{ secrets.PROJECT_ID }}
