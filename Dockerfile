@@ -1,4 +1,4 @@
-WORKING /app
+WORKDIR /app
 
 COPY .mvn/ .mvn
 
