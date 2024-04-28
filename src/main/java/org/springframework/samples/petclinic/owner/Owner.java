@@ -158,7 +158,7 @@ public class Owner extends Person {
 	}
 
 	/**
-	 * Adds the given {@link Visit} to the {@link Pet} with the given id.
+	 * Adds the given {@link Visit} to the {@link Pet} with the given identifier.
 	 * 
 	 * @param petId the identifier of the {@link Pet}, must not be {@literal null}.
 	 * @param visit the visit to add, must not be {@literal null}.
